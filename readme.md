@@ -18,3 +18,13 @@ function deepClone(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 ```
+
+### 3. Format Date
+Formats a given date to a more readable string format.
+
+```javascript
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString('en-US', options);
+}
+```
