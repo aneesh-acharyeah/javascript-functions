@@ -43,4 +43,32 @@ function getRandomInt(min, max) {
 function isArrayEmpty(arr) {
   return Array.isArray(arr) && arr.length === 0;
 }
+```
+
+### 6. Throttle Function
+Limits the number of times a function is called in a given time period (e.g., for mouse or scroll events).
+
+```javascript
+function throttle(fn, limit) {
+  let lastFunc;
+  let lastRan;
+  return function () {
+    const context = this;
+    const args = arguments;
+    if (!lastRan) {
+      fn.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function () {
+        if (Date.now() - lastRan >= limit) {
+          fn.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
+```
+
 
