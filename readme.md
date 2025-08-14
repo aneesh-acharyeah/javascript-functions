@@ -9,3 +9,12 @@ function debounce(fn, delay) {
     timeout = setTimeout(() => fn.apply(this, args), delay);
   };
 }
+```
+### 2. Deep Clone an Object
+Creates a deep copy of an object or array.
+
+```javascript
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+```
