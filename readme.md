@@ -36,3 +36,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
+
+### 5. Check If an Array is Empty
+
+```javascript
+function isArrayEmpty(arr) {
+  return Array.isArray(arr) && arr.length === 0;
+}
+
