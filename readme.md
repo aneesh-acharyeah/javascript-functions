@@ -28,3 +28,11 @@ function formatDate(date) {
   return new Date(date).toLocaleDateString('en-US', options);
 }
 ```
+
+### 4. Generate a Random Integer Between Two Values
+
+```javascript
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+```
