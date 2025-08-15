@@ -100,3 +100,16 @@ function getUrlParam(name) {
 }
 ```
 
+### 10. Detect Browser Type
+
+```javascript
+function getBrowser() {
+  const userAgent = navigator.userAgent;
+  if (userAgent.includes("Chrome")) return "Chrome";
+  if (userAgent.includes("Firefox")) return "Firefox";
+  if (userAgent.includes("Safari")) return "Safari";
+  if (userAgent.includes("Edge")) return "Edge";
+  return "Unknown";
+}
+```
+
