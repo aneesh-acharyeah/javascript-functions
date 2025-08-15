@@ -82,3 +82,12 @@ function secondsToHms(seconds) {
 }
 ```
 
+### 8. Check if a String is a Valid Email
+
+```javascript
+function isValidEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(email);
+}
+```
+
