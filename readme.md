@@ -113,3 +113,12 @@ function getBrowser() {
 }
 ```
 
+### 11. Check if a String is a Palindrome
+
+```javascript
+function isPalindrome(str) {
+  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  const reversedStr = cleanedStr.split('').reverse().join('');
+  return cleanedStr === reversedStr;
+}
+```
