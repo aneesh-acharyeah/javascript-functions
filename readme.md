@@ -122,3 +122,13 @@ function isPalindrome(str) {
   return cleanedStr === reversedStr;
 }
 ```
+
+### 12. Convert an Object to URL Parameters
+
+```javascript
+function objectToUrlParams(obj) {
+  return Object.keys(obj)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`)
+    .join('&');
+}
+```
