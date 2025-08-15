@@ -91,3 +91,12 @@ function isValidEmail(email) {
 }
 ```
 
+### 9. Get URL Parameters
+
+```javascript
+function getUrlParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+```
+
