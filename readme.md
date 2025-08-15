@@ -144,3 +144,14 @@ function generateUUID() {
   });
 }
 ```
+
+### 14. Format Currency
+
+```javascript
+function formatCurrency(amount, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency,
+  }).format(amount);
+}
+```
