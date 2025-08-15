@@ -155,3 +155,13 @@ function formatCurrency(amount, currency = 'USD') {
   }).format(amount);
 }
 ```
+
+### 15. Get the Difference Between Two Dates
+
+```javascript
+function getDateDifference(date1, date2) {
+  const diffTime = Math.abs(new Date(date2) - new Date(date1));
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays;
+}
+```
